@@ -1,0 +1,20 @@
+Container
+    ac393fee0c5b
+
+Comando para iniciar o container
+    docker start <id do container>
+
+Cria um banco de dados descrito no arquivo databse,js
+yarn sequelize db:create
+
+Cria uma migration (Irá criar uma tabela no BD)
+    yarn sequelize migration:create --name=create-users
+
+Comando para executar a migration
+    yarn sequelize db:migrate
+
+Acessa o banco de dados atravez da imagem do docker
+    sudo docker exec -it postbanco psql -U postgres --password
+
+Desfazer tudo que executou na -ultima migrate
+    yarn sequelize db:migrate:undo
